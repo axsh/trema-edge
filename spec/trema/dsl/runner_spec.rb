@@ -38,6 +38,7 @@ module Trema
           context = double(
             'context',
             port: 6653,
+            unix_path: nil,
             tremashark: nil,
             switch_manager: nil,
             packetin_filter: nil,
@@ -63,7 +64,8 @@ module Trema
             hosts: {},
             switches: {},
             apps: {},
-            port: 6653
+            port: 6653,
+            unix_path: nil
           )
 
           Runner.new(context).run
@@ -91,7 +93,8 @@ module Trema
             hosts: {},
             switches: {},
             apps: {},
-            port: 6653
+            port: 6653,
+            unix_path: nil
           )
 
           Runner.new(context).run
@@ -132,7 +135,8 @@ module Trema
             hosts: { 'host0' => host0, 'host1' => host1, 'host2' => host2 },
             switches: {},
             apps: {},
-            port: 6653
+            port: 6653,
+            unix_path: nil
           )
 
           Runner.new(context).run
@@ -157,7 +161,8 @@ module Trema
             hosts: {},
             switches: { 'switch0' => switch0, 'switch1' => switch1, 'switch 2' => switch2 },
             apps: {},
-            port: 6653
+            port: 6653,
+            unix_path: nil
           )
 
           Runner.new(context).run

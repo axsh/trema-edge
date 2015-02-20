@@ -42,13 +42,24 @@ extern const uint SWITCH_MANAGER_ADDR_STR_LEN;
 extern const char SWITCH_MANAGER_PATH[];
 extern const char SWITCH_MANAGER_STATE_PREFIX[];
 
+enum {
+  LISTENER_INFO_NONE,
+  LISTENER_INFO_INET,
+  LISTENER_INFO_UNIX
+};
 
 struct listener_info {
   const char *switch_daemon;
   int switch_daemon_argc;
   char **switch_daemon_argv;
-  uint16_t listen_port;
+
   int listen_fd;
+  int listen_protocol;
+
+  union {
+    uint16_t listen_port;
+    char *listen_path;
+  };
 };
 
 

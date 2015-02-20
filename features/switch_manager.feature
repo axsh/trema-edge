@@ -14,7 +14,8 @@ Feature: switch_manager help
 
         -s, --switch=PATH           the command path of switch
         -n, --name=SERVICE_NAME     service name
-        -p, --port=PORT             server listen port (default 6653)
+        -p, --port=PORT             server listen port (default 6633)
+        -u, --unix=PATH             server listen unix socket
         -d, --daemonize             run in the background
         -l, --logging_level=LEVEL   set logging level
         -h, --help                  display this help and exit
@@ -29,7 +30,8 @@ Feature: switch_manager help
 
         -s, --switch=PATH           the command path of switch
         -n, --name=SERVICE_NAME     service name
-        -p, --port=PORT             server listen port (default 6653)
+        -p, --port=PORT             server listen port (default 6633)
+        -u, --unix=PATH             server listen unix socket
         -d, --daemonize             run in the background
         -l, --logging_level=LEVEL   set logging level
         -h, --help                  display this help and exit
